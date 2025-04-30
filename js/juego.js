@@ -19,7 +19,7 @@ if (!imagen) {
     imagen.style.position = "absolute";
     imagen.style.left = posX + "px";
     imagen.style.top = posY + "px";
-    imagen.style.width = "50px";
+    imagen.style.width = "75px";
     imagen.src = "./img/dino.png"; // Ruta corregida
     
     imagen.onerror = function() {
@@ -58,28 +58,24 @@ const radioAtaque = 300;
 const alturaDesaparicion = 550;
 
 // ===== FUNCIONES DEL JUEGO ===== //
-
+function imagen2(urlImg) {
+    imagen.src = urlImg;
+    console.log('PUTA');
+}
 function actualizarJuego() {
     if (tiempoTranscurrido < 120) {
         // Cambio a modo noche a los 20 segundos
         if (tiempoTranscurrido % 10 < 0.1) {
             document.body.style.backgroundColor = "#1A1A2E"; // Azul oscuro
             tiempoDisplay.style.color = "#FFF";
-            imagen.src = "./img/dinoClaro.png";
         }
         if (tiempoTranscurrido % 20 < 0.1) {
             document.body.style.backgroundColor = "#FFD700"; // Amarillo claro
             tiempoDisplay.style.color = "#000000";
-            imagen.src = "./img/dino.png";
         }
         if (tiempoTranscurrido >= 100 && tiempoTranscurrido < 100.1) {
             misil.style.backgroundColor = '#46c108';
         }
-    }
-    if (tiempoTranscurrido >= 120 && tiempoTranscurrido < 120.1) {
-        document.body.style.backgroundColor = "#610056"; // Verde
-        tiempoDisplay.style.color = "#FFF";
-        imagen.src = "./img/android.png";
     }
     // Mantener modo día
     else if (tiempoTranscurrido < 10) {
@@ -161,7 +157,6 @@ function finDelJuego() {
 }
 
 // ===== EVENTOS ===== //
-
 document.addEventListener('keydown', (event) => {
     const velocidad = 10;
     if ((event.key === 'ArrowLeft' || event.key === 'ArrowRight') && !startTime) {

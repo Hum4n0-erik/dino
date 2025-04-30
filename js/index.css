@@ -4,14 +4,43 @@ body {
     background-color: #FFD700;
     transition: background-color 1s ease;
 }
+.contenedor-botones {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: transparent; /* Fondo completamente transparente */
+    z-index: 999; /* Por si hay otros elementos delante */
+}
+
+.botones {
+    background-color: transparent;
+    border: none;
+    width: 99px;
+    height: 99px;
+    margin: 0 10px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.botonesImg {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+}
+
 
 #Dino {
     position: absolute;
-    width: 50px;
-    height: auto;
     top: 500px;
+    height: auto;
+    width: 150px;
     left: 500px;
-    transition: transform 0.3s;
+    transition: transform 1s;
 }
 
 #tiempoDisplay {
