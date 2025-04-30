@@ -11,7 +11,7 @@
 ###
 
 <h5 align="center">Creando un juego de esquivar<br>Diversos personajes como DOCTOR HOUSE!! O varios dinosaurios.<br>Trabajando para hacer que caigan cosas diferentes.</h5>
-
+<h4> <a href="https://dinomisil.netlify.app/" target="_blank"> Link a la web del juego </a> </h4>
 ###
 
 <h2 align="left">I code with</h2>
@@ -28,6 +28,4 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" height="40" alt="visualstudio logo"  />
 </div>
 
-###
-<h4> <a href="https://dinomisil.netlify.app/" target="_blank"> Link a la web del juego </a> </h4>
 ###
