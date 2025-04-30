@@ -29,7 +29,5 @@
 </div>
 
 ###
-
-<img src="https://raw.githubusercontent.com/Hum4n0-erik/Hum4n0-erik/output/snake.svg" alt="Snake animation" />
-
+<h4> <a href="https://dinomisil.netlify.app/"> Link a la web del juego </a> </h4>
 ###
