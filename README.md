@@ -29,5 +29,5 @@
 </div>
 
 ###
-<h4> <a href="https://dinomisil.netlify.app/"> Link a la web del juego </a> </h4>
+<h4> <a href="https://dinomisil.netlify.app/" target="_blank"> Link a la web del juego </a> </h4>
 ###
