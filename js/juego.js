@@ -89,11 +89,11 @@ function actualizarJuego() {
 }
 
 function crearMisil() {
-    const misil = document.createElement('div');
+    const misil = document.createElement('img');
     misil.style.position = 'absolute';
-    misil.style.width = '30px';
-    misil.style.height = '50px';
-    misil.style.backgroundColor = '#FF0000';
+    misil.style.width = '40px';
+    misil.style.height = '40px';
+    misil.src = './img/objetos/MP.png';
     misil.style.borderRadius = '15px 15px 0 0';
 
     const offsetX = (Math.random() * radioAtaque * 2) - radioAtaque;
