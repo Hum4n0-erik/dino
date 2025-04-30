@@ -62,7 +62,17 @@ function imagen2(urlImg) {
     imagen.src = urlImg;
     console.log('PUTA');
 }
+
+let imgMisil = './img/objetos/MP.png';
+
+let tmpImg = './img/objetos/martillo.png';
+function milImg(urlNueva) {
+    tmpImg.src = urlNueva;
+    console.log('PUTO');
+}
 function actualizarJuego() {
+    imgMisil.src = tmpImg;
+
     if (tiempoTranscurrido < 120) {
         // Cambio a modo noche a los 20 segundos
         if (tiempoTranscurrido % 10 < 0.1) {
@@ -86,14 +96,14 @@ function actualizarJuego() {
     if (tiempoTranscurrido % 15 < 0.1) {
         velocidadMisilActual += 1;
     }
-}
 
+}
 function crearMisil() {
     const misil = document.createElement('img');
     misil.style.position = 'absolute';
     misil.style.width = '40px';
     misil.style.height = '40px';
-    misil.src = './img/objetos/MP.png';
+    misil.src = imgMisil;
     misil.style.borderRadius = '15px 15px 0 0';
 
     const offsetX = (Math.random() * radioAtaque * 2) - radioAtaque;
@@ -162,7 +172,7 @@ document.addEventListener('keydown', (event) => {
     if ((event.key === 'ArrowLeft' || event.key === 'ArrowRight') && !startTime) {
         iniciarJuego();
     }
-
+    
     if (event.key === 'ArrowLeft' && posX > 30) {
         posX -= velocidad;
         if (mirandoDerecha) {

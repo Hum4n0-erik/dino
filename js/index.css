@@ -40,7 +40,6 @@ body {
     height: auto;
     width: 150px;
     left: 500px;
-    transition: transform 1s;
 }
 
 #tiempoDisplay {
