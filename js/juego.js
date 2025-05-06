@@ -2,9 +2,7 @@
  * ============================================
  *           JUEGO DEL DINOSAURIO
  * ============================================
- * Versión corregida - Fondo amarillo fijo
- * Problema resuelto: Fondo blanco al inicio
- */
+**/
 
 // ===== CONFIGURACIÓN INICIAL ===== //
 const imagen = document.getElementById("Dino");
@@ -26,7 +24,10 @@ if (!imagen) {
         console.error("Fallo al cargar:", this.src);
     };
 }
-
+function imagen2(urlImg) {
+    imagen.src = urlImg;
+    console.log('Cambio Personaje');
+}
 // ===== CRONÓMETRO Y FONDOS ===== //
 let startTime;
 let cronometroInterval;
@@ -36,7 +37,7 @@ let tiempoTranscurrido = 0;
 const tiempoDisplay = document.createElement("div");
 tiempoDisplay.id = "tiempoDisplay";
 tiempoDisplay.style.position = "absolute";
-tiempoDisplay.style.top = "20px";
+tiempoDisplay.style.top = "70px";
 tiempoDisplay.style.left = "20px";
 tiempoDisplay.style.fontFamily = "Arial";
 tiempoDisplay.style.fontSize = "24px";
@@ -58,21 +59,12 @@ const radioAtaque = 300;
 const alturaDesaparicion = 550;
 
 // ===== FUNCIONES DEL JUEGO ===== //
-function imagen2(urlImg) {
-    imagen.src = urlImg;
-    console.log('PUTA');
-}
-
-let imgMisil = './img/objetos/MP.png';
-
-let tmpImg = './img/objetos/martillo.png';
+const imgMisil = './img/objetos/MP.png';
 function milImg(urlNueva) {
     tmpImg.src = urlNueva;
-    console.log('PUTO');
+    console.log('Imagen nueva');
 }
 function actualizarJuego() {
-    imgMisil.src = tmpImg;
-
     if (tiempoTranscurrido < 120) {
         // Cambio a modo noche a los 20 segundos
         if (tiempoTranscurrido % 10 < 0.1) {
@@ -140,11 +132,18 @@ function moverMisiles() {
         }
     }
 }
-
-// ===== CONTROL DEL JUEGO ===== //
+// ===== CONTROL DEL MISIL ===== //
 let numMisil = Math.floor(Math.random() * 5) + 1;
+function controlMisil(num) {
+    console.log(numMisil);
+    numMisil = num;
+    imgMisil.src = './img/objetos/martillo.png';
+    console.log(numMisil);
+}
+// ===== CONTROL DEL JUEGO ===== //
 function iniciarJuego() {
     if (!startTime) {
+        document.getElementById("header").innerHTML = "";
         startTime = performance.now();
         cronometroInterval = setInterval(() => {
             tiempoTranscurrido = (performance.now() - startTime) / 1000;

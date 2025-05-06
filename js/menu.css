@@ -1,7 +1,7 @@
 /* Menu desplegable */
 #header {
     margin:auto;
-    width:500px;
+    width:5000px;
     font-family:Arial, Helvetica, sans-serif;
 }
 ul, ol {
@@ -12,7 +12,6 @@ ul, ol {
 }
 .nav li a {
     background-color:var(--colorMenuStatico);
-    color:#fff;
     text-decoration:none;
     padding:10px 12px;
     display:block;
@@ -34,4 +33,29 @@ ul, ol {
 .nav li ul li ul {
     right:-140px;
     top:0px;
+}
+/* Estilos del menu */
+.Dificultad, .botonVisible{
+    border: 1px solid black;
+    font-size: 25px;
+}
+#facil{
+    background-color: aqua ;
+}
+#normal{
+    background-color: greenyellow;
+}
+#dificil{
+    background-color:orange;
+}
+#imposible{
+    background-color: red;
+}
+.botonVisible{
+    background-color: rgba(108, 55, 255, 0.841);
+    padding: 10px;
+    color: rgb(116, 219, 164);
+}
+.Dificultad:hover{
+    color: white;
 }

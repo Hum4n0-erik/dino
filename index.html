@@ -9,15 +9,27 @@
     <title>Dino Game</title>
 </head>
 <body>
-    <div class="contenedor-botones">
-     <button class="botones" type="button" onclick="imagen2('./img/android.png')"> <img class="botonesImg" src="./img/android.png"> </button>
-     <button class="botones" type="button" onclick="imagen2('./img/doctorhouse.png')"> <img class="botonesImg" src="./img/doctorhouse.png"> </button>
-     <button class="botones" type="button" onclick="imagen2('./img/perro.png')"> <img class="botonesImg" src="./img/perro.png"> </button>
-     <button class="botones" type="button" onclick="imagen2('./img/windows.png')"> <img class="botonesImg" src="./img/windows.png"> </button>
-     <button class="botones" type="button" onclick="imagen2('./img/dino.png')"> <img class="botonesImg" src="./img/dino.png"> </button>
-     <button class="botones" type="button" onclick="imagen2('./img/dinoClaro.png')"> <img class="botonesImg" src="./img/dinoClaro.png"> </button>
-    </div> 
-    <img src="./img/dino.png" id="Dino">
-    <script src="./js/juego.js"></script>
+<div id="header">
+    <ul class="nav">
+        <li class="botonVisible"> Dificiltad
+            <ul>
+                <li> <button id="facil" class="Dificultad" type="button" onclick="controlMisil(1)"> Facil </button> </li>
+                <li> <button id="normal" class="Dificultad" type="button" onclick="controlMisil(2)"> Normal </button> </li>
+                <li> <button id="dificil" class="Dificultad" type="button" onclick="controlMisil(3)"> Dificil </button> </li>
+                <li> <button id="imposible" class="Dificultad" type="button" onclick="controlMisil(5)"> Imposible </button></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="contenedor-botones">
+    <button class="botones" type="button" onclick="imagen2('./img/android.png')"> <img class="botonesImg" src="./img/android.png"> </button>
+    <button class="botones" type="button" onclick="imagen2('./img/doctorhouse.png')"> <img class="botonesImg" src="./img/doctorhouse.png"> </button>
+    <button class="botones" type="button" onclick="imagen2('./img/perro.png')"> <img class="botonesImg" src="./img/perro.png"> </button>
+    <button class="botones" type="button" onclick="imagen2('./img/windows.png')"> <img class="botonesImg" src="./img/windows.png"> </button>
+    <button class="botones" type="button" onclick="imagen2('./img/dino.png')"> <img class="botonesImg" src="./img/dino.png"> </button>
+    <button class="botones" type="button" onclick="imagen2('./img/dinoClaro.png')"> <img class="botonesImg" src="./img/dinoClaro.png"> </button>
+</div> 
+<img src="./img/dino.png" id="Dino">
+<script src="./js/juego.js"></script>
 </body>
-</html>/
+</html>
